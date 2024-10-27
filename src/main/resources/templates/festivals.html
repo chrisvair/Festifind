@@ -1,0 +1,77 @@
+<!-- festivals.html -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festivals</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <!-- Leaflet.markercluster CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/festivals.css}">
+    <link rel="stylesheet" th:href="@{/css/mapStyle.css}" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+    </style>
+    <script th:src="@{/js/mapScript.js}"></script>
+</head>
+<body>
+<!-- Inclusion de la barre de navigation -->
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="festiv-page">
+
+    <div th:replace="fragments/header :: header"></div>
+    <h2 class="welcome">Bienvenue sur Festifind !</h2>
+    <div th:each="fest : ${festivals.getResults()}" class="card" th:data-lat="${fest.getGeocodage_xy().getLat()}"
+         th:data-lon="${fest.getGeocodage_xy().getLon()}">
+        <div class="card-body">
+            <h3 th:text="${fest.getNom_du_festival()}" class="card-title"></h3>
+            <div th:text="${fest.getPeriode_principale_de_deroulement_du_festival()}" class="card-subtitle"></div>
+            <p th:text="${fest.getCommune_principale_de_deroulement()}" class="card-text"></p>
+            <p th:text="${fest.getSous_categorie_musique()}" class="card-text"></p>
+
+            <!-- Formulaire caché pour le bouton "Voir plus" -->
+            <form th:action="@{/festival-details}" method="get" style="display: none;">
+                <input type="hidden" name="search" th:value="${fest.getNom_du_festival()}" />
+                <!-- Bouton "Voir plus" -->
+                <button type="submit" class="btn btn-primary" >Voir plus</button>
+            </form>
+            <!-- Bouton "Voir plus" -->
+            <button type="button" class="btn btn-primary voir-plus-btn" th:attr="data-festival-name=${fest.getNom_du_festival()}">Voir plus</button>
+
+
+        </div>
+    </div>
+
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script th:src="@{/js/mapScript.js}"></script>
+</div>
+    <!-- Charger les scripts Bootstrap via Thymeleaf -->
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/2.5.4/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+    <script>document.getElementById("commentDate").value = new Date().toISOString();</script>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    document.querySelectorAll('.voir-plus-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const festivalName = encodeURIComponent(this.getAttribute('data-festival-name'));
+            window.location.href = '/festival-details?search=' + festivalName;
+        });
+    });
+    /*]]>*/
+</script>
+
+</body>
+</html>

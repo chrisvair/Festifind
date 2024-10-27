@@ -1,0 +1,67 @@
+/* style.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+            180deg,
+            rgba(255, 234, 202, 1) 0%,
+            rgba(255, 173, 147, 1) 100%
+    );
+    background-attachment: fixed;
+}
+
+.bungee-shade-regular {
+    font-family: "Bungee Shade", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+input[type=text] {
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 30%
+}
+
+.title {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 128px;
+    font-weight: 400;
+    height: 150px;
+    border: 100px;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #FF3C11, #FFA41D);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.welcome{
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #FF3C11;
+    margin-bottom: 30px;
+    margin-left: 3%;
+}
+
+.search-select {
+    position: relative;
+    display: inline-block;
+    width: 150px; /* ajustez la largeur selon vos besoins */
+    height: 50px;
+    font-size: 10px;
+    background-color: #FF3C11;
+    background-repeat: repeat-x;
+    border: none;
+    color: #fff;
+    margin-left: 3%;
+    transform: translate(0,-9px);
+}

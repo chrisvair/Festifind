@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="header" th:fragment="header">
+    <div class="title">FESTI’FIND</div>
+    <select class="search-select" name="search" id="search-select">
+        <option selected>Que cherchez-vous ?</option>
+        <option value="Location">Ville</option>
+        <option value="Festival">Nom</option>
+        <option value="Style">Style</option>
+    </select>
+    <input type="text" id="searchInput" placeholder="Rechercher" size="24" onkeydown="search(event)">
+
+</div>
+</body>
+</html>

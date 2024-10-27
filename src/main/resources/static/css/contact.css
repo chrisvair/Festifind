@@ -1,0 +1,55 @@
+/* Ajoutez vos styles personnalisés ici */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    align-content: center;
+    text-align: center;
+}
+
+.home-page {
+    padding: 50px;
+}
+
+.home-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.img-thumbnail {
+    max-width: 100px; /* Ajustez la taille des images selon vos besoins */
+    margin-bottom: 10px;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+.photo{
+    margin: 20px;
+}
+
+.contact{
+    margin: 5px;
+}
+
+.mail{
+    color: rgba(255, 173, 147, 1);
+}

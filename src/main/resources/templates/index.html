@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Festi'find</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        /* Ajoutez vos styles personnalisés ici */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .home-page {
+            padding: 50px;
+        }
+        .home-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<!-- Inclusion de la barre de navigation -->
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container home-page">
+    <div class="home-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">FESTI’FIND</div>
+                <a href="/festival" class="btn btn-outline-success">Commencer la recherche !</a>
+                <br>
+                <br>
+                <br>
+                <p>
+                    Vous cherchez à découvrir des festivals près de chez vous ? Ne cherchez plus ! Festi'find est votre compagnon idéal pour explorer une multitude d'événements festifs et culturels à travers votre région et au-delà.
+                </p>
+                <p>
+                    Notre plateforme conviviale et intuitive vous permet de rechercher facilement des festivals en fonction de votre emplacement, de vos préférences musicales, artistiques ou culturelles. Que vous soyez passionné de musique, de cinéma, de gastronomie ou d'arts visuels, Festi'find vous propose une sélection variée d'événements adaptés à vos goûts.
+                </p>
+                <p>
+                    Que vous soyez un amateur de festivals chevronné ou que vous recherchiez simplement une manière excitante de passer votre week-end, Festi'find est là pour vous aider à planifier votre prochaine aventure. Rejoignez notre communauté passionnée et plongez dans l'effervescence des festivals près de chez vous avec Festi'find !
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+<!-- Charger les scripts Bootstrap -->
+<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/2.5.4/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+</body>
+</html>

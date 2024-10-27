@@ -1,0 +1,10 @@
+/* mapStyle.css */
+#map {
+    width: 50%; /* Adjust the width as needed */
+    height: 60vh; /* Adjust the height as needed */
+    position: fixed; /* Position the map relative to the viewport */
+    top: 60%; /* Align the top of the map to the middle of the viewport */
+    right: 20px; /* Offset the map slightly from the right side */
+    transform: translateY(-50%); /* Adjust to vertically center the map */
+    z-index: 1; /* Make sure the map stays on top */
+}

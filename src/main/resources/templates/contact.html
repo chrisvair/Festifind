@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Festi'find</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/contact.css}">
+</head>
+<body>
+<!-- Inclusion de la barre de navigation -->
+<div th:replace="fragments/navbar :: navbar"></div>
+<div class="container home-page">
+    <div class="home-content">
+        <div class="title">Contacts</div>
+        <div class="column">
+            <div class="row">
+                    <div class="contact">
+                        <div class="photo">
+                            <img src="https://media.licdn.com/dms/image/D4E03AQHYT6jEWlZF9g/profile-displayphoto-shrink_800_800/0/1698174012696?e=1717632000&v=beta&t=v7bfNtjuYwow1_bgbbkxY-BgJv2FxLJNieFJ4yVNNfo"
+                                 alt="01.png" class="img-thumbnail">
+                        </div>
+                        <div class="name">
+                            <a class="mail" href="mailto:lise.babe6@etu.univ-lorraine.fr">Lise Babe</a><br>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="photo">
+                            <img src="https://media.licdn.com/dms/image/D4E03AQGxWIHlLcCRhg/profile-displayphoto-shrink_400_400/0/1711912118059?e=1717632000&v=beta&t=ZknHFp1e_R0irLMTE2qB0FHWFUiJmRykFGNG-rEXo4k"
+                                 alt="02.png" class="img-thumbnail">
+                        </div>
+                        <div class="name">
+                            <a class="mail" href="mailto:thomas.dolle4@etu.univ-lorraine.fr">Thomas Dolle</a><br>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="contact">
+                        <div class="photo">
+                            <img src="https://media.licdn.com/dms/image/D4E03AQFNs9LetMZ72A/profile-displayphoto-shrink_400_400/0/1699023666372?e=1717632000&v=beta&t=AE4OpwiFlyVcRZ4PsX599eWQdA9RnIfcVuVcJGKlv3M"
+                                 alt="03.png" class="img-thumbnail">
+                        </div>
+                        <div class="name">
+                            <a class="mail" href="mailto:aymeri.germain9@etu.univ-lorraine.fr">Aymeri Germain</a><br>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="photo">
+                            <img src="https://media.licdn.com/dms/image/D4E03AQHgmKBXA_0pKg/profile-displayphoto-shrink_800_800/0/1700211191680?e=1717632000&v=beta&t=Gfmf4bphYP__nUhPENRgU-YjtWs6wk7AK9GhT5dlhpA"
+                                 alt="04.png" class="img-thumbnail">
+                        </div>
+                        <div class="name">
+                            <a class="mail" href="mailto:christina.vairelles5@etu.univ-lorraine.fr">Christina Vairelles</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+
+<!-- Charger les scripts Bootstrap -->
+<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/2.5.4/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+</body>
+</html>

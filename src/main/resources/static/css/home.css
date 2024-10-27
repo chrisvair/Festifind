@@ -1,0 +1,21 @@
+/*home.css*/
+.home-page,
+.home-page * {
+    box-sizing: border-box;
+}
+
+.home-page {
+    height: 1024px;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding-right: 10px;
+}
+
+select {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+}
+

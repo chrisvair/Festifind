@@ -1,0 +1,14 @@
+.footer {
+    color: grey;
+    position: fixed; /* Position fixe pour rester en bas de la fenêtre */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Occupe toute la largeur */
+    padding: 20px; /* Espacement intérieur */
+    text-align: center; /* Centrage du texte */
+}
+
+.footer p {
+    color: grey;
+}
+
